@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/healthStyles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io//favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_io//site.webmanifest">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a class="selectedNav" href="#">HEALTH</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="donate.html">DONATE</a></li>
+        </ul>
+    </nav> /
+    <button id="darkMode" type="button">🌙</button>
+    <div class="container">
+        <div class="logInfoContainer">
+            <div class="mainDiv">
+                <span class="topCals">Calories:</span>
+                <span class="topCals" id="calories">0</span>
+                <div class="macroDiv">
+                    <div class="macro">
+                        <span>Fats:</span>
+                        <span id="totalFats">0</span>
+                        <span>g</span>
+                    </div>
+                    <div class="macro">
+                        <span>Carbohydrates:</span>
+                        <span id="totalCarbs">0</span>
+                        <span>g</span>
+                    </div>
+                    <div class="macro">
+                        <span>Protein:</span>
+                        <span id="totalProtein">0</span>
+                        <span>g</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mainDiv logMain logDivMain">
+                <p class="bolded centered">Food Log</p>
+                <div id="logDiv"></div>
+            </div>
+        </div>
+        <div class="mainDiv">
+            <p class="bolded centered">Calorie Calculator</p>
+            <div class="info">
+                <form id="calculator">
+                    <div class="calcInput">
+                        <label>Sex</label>
+                        <select id="sex">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="calcInput">
+                        <label>Weight (lb.)</label>
+                        <input value="130" type="number" id="weight"><br>
+                    </div>
+                    <div class="calcInput">
+                        <label>Height (in.)</label>
+                        <input value="60" type="number" id="height"><br>
+                    </div>
+                    <div class="calcInput">
+                        <label>Age</label>
+                        <input value="18" type="number" id="age"><br>
+                    </div>
+                    <div class="calcInput">
+                        <label>Activity Level</label>
+                        <select id="activity">
+                            <option value="1">Little or No Exercise</option>
+                            <option value="2">Light Exercise 1-3 Days/Week</option>
+                            <option value="3">Moderate Exercise 3-5 Days/Week</option>
+                            <option value="4">Hard Exercise 6-7 Days/Week</option>
+                            <option value="5">Very Hard Exercise or Extremely Physical Occupation</option>
+                        </select>
+                    </div>
+                    <button type="submit">CALCULATE</button>
+                </form>
+                <div class="info calcTotal">
+                    <span>Calories/Day:</span>
+                    <span id="caloriesFromCalc">...</span>
+                </div>
+            </div>
+        </div>
+        <div class="mainDiv logMain">
+            <p class="bolded centered">Goals</p>
+            <div class="info logMain">
+                <p class="bolded smaller">Getting Started:</p>
+                <p>When understanding caloric and macro-nutrient intake, the most important number for weight loss,
+                    weight gain, or maintaining weight is the amount of calories that your body burns in one day. If you
+                    eat more calories than your body burns, excess energy is stored as excess weight on your body. If
+                    you eat less
+                    calories than your body burns in one day, weight from your body will be converted into energy. Be
+                    honest with yourself when tracking calories; a more accurate estimation will produce a more reliable
+                    result. Use
+                    the calorie calculator in the middle column to find out about how many calories you burn in one day.
+                </p>
+            </div>
+            <div class="info logMain">
+                <p class="bolded smaller">Weight Loss:</p>
+                <p>Once you know how many calories your body burns in a day, you can create a simple plan for yourself.
+                    Eat 300-400 calories less than what you burn each day. For example, if I burn 2000 calories each
+                    day, I'll eat around 1600-1700 calories each day. Make sure to avoid under-eating! Larger deficits
+                    are more likely to cause intense cravings or binge eating. Make sure to track everything you eat.
+                    Some foods such as sauces and drinks can contain a large number of calories, so make sure to track
+                    them too! Lastly, stepping on a scale daily to
+                    check for
+                    progress might be your natural inclination, but we recommend you avoid this practice. Your weight
+                    fluctuates constantly for a variety of reasons, so weigh yourself weekly for more accurate results.
+                </p>
+            </div>
+            <div class="info logMain">
+                <p class="bolded smaller">Weight Gain:</p>
+                <p>Similar to weight loss,
+                    eat 300-400 calories more than what you burn each day. For example, if I burn 2000 calories each
+                    day, I'll eat around 2300-2400 calories each day. Make sure to avoid over-eating! Huge binges
+                    are more likely to cause stomach pains and a lack of hunger. Lastly, stepping on a scale daily to
+                    check for
+                    progress might be your natural inclination, but we recommend you avoid this practice. Your weight
+                    fluctuates constantly for a variety of reasons, so weigh yourself weekly for more accurate results.
+                </p>
+            </div>
+            <div class="info logMain">
+                <p class="bolded smaller">Maintenance:</p>
+                <p>This is the most simple goal of all. Try your best to eat the same number of calories that you burn.
+                    Calorie calculators aren't always accurate, so when you check your weight each week, increase or
+                    decrease caloric intake based on the changes you see. Eating within 100-200 calories of your goal is
+                    more than ok as long as your weight doesn't change dramatically.</p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/calorieCalculatorScript.js"></script>
+    <script src="scripts/logScript.js"></script>
+    <script src="scripts/darkModeScript.js"></script>
+</body>
+
+</html>
