@@ -100,13 +100,15 @@ const caloriesChart = new Chart(ctx, {
         labels: dayNums,
         datasets: [
             {
-                label: 'Calorie Goal (kcal)',
+                label: 'Calorie Goal/Limit (kcal)',
                 data: goalNums,
                 borderColor: 'rgb(63, 22, 126, 1)',
                 borderWidth: 2,
                 fill: false,
                 tension: 0.3,
                 pointBackgroundColor: 'rgb(63, 22, 126, 1)',
+                pointRadius: 0,
+                pointHoverRadius: 0,
             }, {
                 label: 'Caloric Intake (kcal)',
                 data: dataNums,
