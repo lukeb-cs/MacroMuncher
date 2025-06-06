@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     height: 97vh;
 }
@@ -26,6 +26,18 @@
     margin-right: 8vw;
 }
 
+@media (max-width: 1280px) {
+    .circle {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .circle {
+        font-size: 5px;
+    }
+}
+
 .remove {
     margin-left: 4vw;
     margin-right: 4vw;
@@ -37,7 +49,8 @@
 
 .logDivMain {
     margin-top: 3vh;
-    height: 62.5vh;
+    flex-grow: 1;
+    overflow-y: scroll;
 }
 
 .macro {
@@ -49,38 +62,9 @@
     font-weight: bold;
 }
 
-.calcInput {
+.logInfoContainer {
     display: flex;
     flex-direction: column;
-    margin: 1vh;
-}
-
-.calcInput>input {
-    width: 22vw;
-}
-
-#sex {
-    background-color: white;
-    padding: 1vh 1vw;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    transition: all 0.3s ease;
-    width: 24.2vw;
-}
-
-#activity {
-    background-color: white;
-    padding: 1vh 1vw;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    transition: all 0.3s ease;
-    width: 24.2vw;
-}
-
-.calcTotal {
-    font-weight: bold;
+    justify-content: flex-end;
+    max-height: 100vh;
 }

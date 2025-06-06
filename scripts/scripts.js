@@ -1,9 +1,3 @@
-// TODO:
-    // Make a dark mode setting
-    // Make a Search function for the custom foods
-    // Add mobile format css
-
-
 // Retrieving the elements for each of the form values on the left side of the page
 const addedName = document.getElementById("n");
 const addedFats = document.getElementById("f");
@@ -18,6 +12,14 @@ const protein = document.getElementById("totalProtein");
 
 // Start with an empty log
 let log = [];
+
+// Start with no previous history
+let history = [];
+
+// Check if a history has been made before and set history to that value
+if (localStorage.getItem('history')) {
+    history = JSON.parse(localStorage.getItem('history'));
+}
 
 // List of custom foods displayed on the right side of the page
 let foods = [
@@ -211,8 +213,14 @@ document.getElementById("macros").addEventListener("submit", function (event) {
     });
 });
 
-// When the new day button is pressed, call the newDay helper function
-document.getElementById("reset").addEventListener("click", newDay);
+// When the new day button is pressed, call the newDay helper function after localStorage is updated
+document.getElementById("reset").addEventListener("click", function () {
+
+    // Update the history with the day's current values, then call NewDay
+    history.push({ calories: JSON.parse(localStorage.getItem('calories')), fats: JSON.parse(localStorage.getItem('fats')), carbs: JSON.parse(localStorage.getItem('carbs')), protein: JSON.parse(localStorage.getItem('protein')) });
+    localStorage.setItem('history', JSON.stringify(history));
+    newDay();
+});
 
 // Helper function to set all the local storage values and values at the top of the page to 0
 function newDay() {

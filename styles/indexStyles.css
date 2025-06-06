@@ -23,6 +23,26 @@
     height: 100vh;
 }
 
+@media (max-width: 1280px) {
+    #foodDiv {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .circle {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #foodDiv {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .circle {
+        font-size: 5px;
+    }
+}
+
 #macros {
     margin: 0.75vh 0.5vw;
     border-radius: 15px;
