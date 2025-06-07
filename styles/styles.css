@@ -59,6 +59,7 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding: 0px !important;
 }
 
 .navbar li {
@@ -89,16 +90,6 @@ input {
     color: transparent;
 }
 
-#darkMode {
-    position: fixed;
-    top: 6px;
-    right: 7px;
-    z-index: 10000;
-    padding-left: 13px;
-    padding-right: 13px;
-    padding-bottom: 14px;
-}
-
 .foodItem {
     margin: 0.75vh 0.5vw;
     border-radius: 15px;
@@ -124,8 +115,8 @@ input {
 }
 
 .circle {
-    width: 5vw;
-    height: 5vw;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0);
     border: 2px solid black;
@@ -147,4 +138,32 @@ input {
     padding: 2vh 2vw;
     color: black;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1000px) {
+    * {
+        font-size: 10px !important;
+    }
+
+    .circle {
+        height: 50px !important;
+        width: 50px !important;
+    }
+
+    .mainDiv:not(.topRow) {
+        margin-left: 3px !important;
+        margin-right: 3px !important;
+        margin-bottom: 3px !important;
+        padding: 5px;
+    }
+
+    .topRow {
+        padding-left: 5px;
+        padding-bottom: 5px;
+        padding-right: 5px;
+    }
+
+    input {
+        width: 70%;
+    }
 }

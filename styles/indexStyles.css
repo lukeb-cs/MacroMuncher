@@ -23,13 +23,9 @@
     height: 100vh;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1500px) {
     #foodDiv {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .circle {
-        font-size: 15px;
     }
 }
 
@@ -38,8 +34,11 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .circle {
-        font-size: 5px;
+    .close {
+        width: 15px !important;
+        height: 15px !important;
+        font-size: 8px !important;
+        line-height: 16px !important;
     }
 }
 

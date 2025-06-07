@@ -45,3 +45,18 @@
     margin-right: 5vw;
     margin-top: 3vh;
 }
+
+@media (max-width: 1000px) {
+    .bolded {
+        margin-left: 10px;
+    }
+
+    p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    img {
+        display: none;
+    }
+}
