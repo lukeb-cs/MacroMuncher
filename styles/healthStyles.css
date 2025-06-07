@@ -70,3 +70,21 @@
     justify-content: flex-end;
     max-height: 100vh;
 }
+
+@media (max-width: 1000px) {
+    .circle {
+        display: flex;
+        font-size: 6px !important;
+        height: 30px !important;
+        width: 30px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .circle {
+        display: flex;
+        font-size: 6px !important;
+        height: 30px !important;
+        width: 40px !important;
+    }
+}
