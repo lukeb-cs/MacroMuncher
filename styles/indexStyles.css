@@ -115,3 +115,7 @@
     color: rgb(255, 98, 98);
     font-weight: bold;
 }
+
+#searchInput {
+    width: 70%;
+}

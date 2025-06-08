@@ -23,20 +23,57 @@ if (localStorage.getItem('history')) {
 
 // List of custom foods displayed on the right side of the page
 let foods = [
-    { name: "Great Value Greek Yogurt (170g)", fats: 0, carbs: 5, protein: 17 },
-    { name: "93% Lean Ground Beef (4oz)", fats: 8, carbs: 0, protein: 23 },
-    { name: "Frosted Flakes (1c)", fats: 0, carbs: 32, protein: 1 },
-    { name: "Heinz Ketchup (2tbsp)", fats: 0, carbs: 5, protein: 0 },
-    { name: "Mission Keto Tortilla", fats: 6, carbs: 4, protein: 10 },
-    { name: "Large Egg", fats: 5, carbs: 0, protein: 6 },
-    { name: "Great Value Sugar Free Syrup (2tbsp)", fats: 0, carbs: 5, protein: 0 },
-    { name: "Kodiak Pancake Mix (63g)", fats: 2.5, carbs: 32, protein: 15 },
-    { name: "Rice (1/4c)", fats: 0, carbs: 36, protein: 3 },
-    { name: "Fit Crunch Mint Chocolate Chip Bar", fats: 8, carbs: 15, protein: 16 },
-    { name: "Pure Sesame Oil (1tbsp)", fats: 14, carbs: 0, protein: 0 },
-    { name: "Low Sodium Soy Sauce (1tbsp)", fats: 0, carbs: 1, protein: 1 },
-    { name: "Kraft American Cheese Slice", fats: 4, carbs: 2, protein: 4 },
-];
+  { "name": "Large Egg (50g)", "fats": 5, "carbs": 0, "protein": 6 },
+  { "name": "White Rice, cooked (1 cup / 186g)", "fats": 0.4, "carbs": 45, "protein": 4.2 },
+  { "name": "Ground Beef 80% lean, cooked (3oz / 85g)", "fats": 17, "carbs": 0, "protein": 22 },
+  { "name": "Ground Beef 85% lean, cooked (3oz / 85g)", "fats": 13, "carbs": 0, "protein": 23 },
+  { "name": "Ground Beef 90% lean, cooked (3oz / 85g)", "fats": 10, "carbs": 0, "protein": 22 },
+  { "name": "Ground Beef 93% lean, cooked (3oz / 85g)", "fats": 8, "carbs": 0, "protein": 23 },
+  { "name": "Ground Beef 95% lean, cooked (3oz / 85g)", "fats": 5, "carbs": 0, "protein": 23 },
+  { "name": "Ground Turkey (85% lean), cooked (3oz / 85g)", "fats": 9, "carbs": 0, "protein": 22 },
+  { "name": "Fat‑Free Greek Yogurt (170g)", "fats": 0, "carbs": 6, "protein": 17 },
+  { "name": "Regular Greek Yogurt (170g)", "fats": 5, "carbs": 9, "protein": 17 },
+  { "name": "White Bread (1 slice / 25g)", "fats": 1.2, "carbs": 12, "protein": 2 },
+  { "name": "Wheat Bread (1 slice / 25g)", "fats": 1, "carbs": 11, "protein": 2 },
+  { "name": "Plain Bagel (99g)", "fats": 1, "carbs": 56, "protein": 10 },
+  { "name": "Cream Cheese (2 tbsp / 30g)", "fats": 10, "carbs": 1, "protein": 2 },
+  { "name": "Banana, medium (150g)", "fats": 0.3, "carbs": 23, "protein": 1 },
+  { "name": "Apple, medium (130g)", "fats": 0.2, "carbs": 18, "protein": 0.3 },
+  { "name": "Orange, medium (130g)", "fats": 0.2, "carbs": 15, "protein": 1 },
+  { "name": "Corn, canned (1 cup / 200g)", "fats": 2.2, "carbs": 41, "protein": 5 },
+  { "name": "Broccoli, steamed (1 cup / 150g)", "fats": 0.6, "carbs": 8, "protein": 5 },
+  { "name": "Salmon, cooked (3oz / 85g)", "fats": 10.5, "carbs": 0, "protein": 17 },
+  { "name": "All‑Purpose Flour (1 cup / 110g)", "fats": 1.2, "carbs": 84, "protein": 12 },
+  { "name": "Peanuts (1oz / 28g)", "fats": 14, "carbs": 6, "protein": 7 },
+  { "name": "Almonds (1oz / 28g)", "fats": 14, "carbs": 6, "protein": 6 },
+  { "name": "Cashews (1oz / 28g)", "fats": 12, "carbs": 8, "protein": 5 },
+  { "name": "Olive Oil (1 tbsp / 14g)", "fats": 14, "carbs": 0, "protein": 0 },
+  { "name": "Avocado (1/2 medium / 108g)", "fats": 18, "carbs": 6, "protein": 2 },
+  { "name": "Bacon (3 slices / 34g)", "fats": 13, "carbs": 0, "protein": 10 },
+  { "name": "Turkey Bacon (3 slices / 30g)", "fats": 6, "carbs": 0, "protein": 6 },
+  { "name": "American Cheese (1 slice / 21g)", "fats": 6.5, "carbs": 2, "protein": 5 },
+  { "name": "Cheddar Cheese (1 slice / 28g)", "fats": 9, "carbs": 0.4, "protein": 7 },
+  { "name": "Ranch Dressing (2 tbsp / 30g)", "fats": 14, "carbs": 2, "protein": 0.2 },
+  { "name": "Canned Tuna in water (3oz / 85g)", "fats": 1, "carbs": 0, "protein": 20 },
+  { "name": "Peanut Butter (2 tbsp / 32g)", "fats": 16, "carbs": 6, "protein": 8 },
+  { "name": "Chicken Breast, cooked (3oz / 85g)", "fats": 3, "carbs": 0, "protein": 26 },
+  { "name": "Strawberries (1 cup / 150g)", "fats": 0.5, "carbs": 11.7, "protein": 1 },
+  { "name": "Blueberries (1 cup / 144g)", "fats": 0.5, "carbs": 19, "protein": 1 },
+  { "name": "Ketchup (2 tbsp / 34g)", "fats": 0, "carbs": 5, "protein": 0 },
+  { "name": "Mayonnaise (1 tbsp / 14g)", "fats": 10, "carbs": 0, "protein": 0 },
+  { "name": "Whole Milk (1 cup / 244g)", "fats": 8, "carbs": 12, "protein": 8 },
+  { "name": "2% Milk (1 cup / 244g)", "fats": 5, "carbs": 12, "protein": 8 },
+  { "name": "Skim Milk (1 cup / 244g)", "fats": 0, "carbs": 12, "protein": 8 },
+  { "name": "Half‑and‑Half (2 tbsp / 30g)", "fats": 10, "carbs": 1, "protein": 0.3 },
+  { "name": "Parmesan Cheese (1 tbsp / 5g)", "fats": 2, "carbs": 0, "protein": 2 },
+  { "name": "Protein Powder (1 scoop / ~30g)", "fats": 1.5, "carbs": 3, "protein": 24 },
+  { "name": "Salsa (2 tbsp / 30g)", "fats": 0, "carbs": 4, "protein": 0 },
+  { "name": "Shrimp, cooked (3oz / 85g)", "fats": 1, "carbs": 0, "protein": 20 },
+  { "name": "Potato, baked medium (173g)", "fats": 0, "carbs": 37, "protein": 4 },
+  { "name": "Sweet Potato, baked medium (110g)", "fats": 0, "carbs": 36, "protein": 2 },
+  { "name": "Flour Tortilla (8\" / 49g)", "fats": 4, "carbs": 24, "protein": 4 },
+  { "name": "Low‑Carb Tortilla (e.g. 6\" / 40g)", "fats": 5, "carbs": 15, "protein": 7 }
+]
 
 // If there is already a food list in local storage, replace the current list with the new one
 if (localStorage.getItem('foodList')) {
@@ -272,4 +309,18 @@ document.getElementById("newFood").addEventListener("click", function (event) {
 
     // Refreshing the list
     LoadFoods();
+});
+
+// selectors for the search bar and list contents
+const searchInput = document.getElementById('searchInput');
+const items = document.querySelectorAll('#foodDiv .foodItem');
+
+// Filtering items based on their content
+searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+
+    items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(searchTerm) ? '' : 'none';
+    });
 });
