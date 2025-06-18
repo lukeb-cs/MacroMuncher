@@ -248,8 +248,6 @@ document.getElementById("macros").addEventListener("submit", function (event) {
     inputs.forEach(function (input) {
         input.value = '';
     });
-
-    location.reload();
 });
 
 // When the new day button is pressed, call the newDay helper function after localStorage is updated
@@ -304,10 +302,10 @@ document.getElementById("newFood").addEventListener("click", function (event) {
     foods.push({ name: addedName.value, fats: addedFats.value, carbs: addedCarbs.value, protein: addedProtein.value });
 
     // Set all of the values back to their placeholders once calculations are done
-    var inputs = document.querySelectorAll("#macros input");
-    inputs.forEach(function (input) {
-        input.value = '';
-    });
+    // var inputs = document.querySelectorAll("#macros input");
+    // inputs.forEach(function (input) {
+    //     input.value = '';
+    // });
 
     // Refreshing the list
     LoadFoods();
