@@ -200,7 +200,7 @@ function LoadFoods() {
 // What to do when the submit button is pressed on the left hand side of the page
 document.getElementById("macros").addEventListener("submit", function (event) {
 
-    event.preventDefault();
+    // event.preventDefault();
 
     // Checking for null values
     if (addedFats.value.trim() == '') {
