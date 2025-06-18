@@ -200,7 +200,7 @@ function LoadFoods() {
 // What to do when the submit button is pressed on the left hand side of the page
 document.getElementById("macros").addEventListener("submit", function (event) {
 
-    // event.preventDefault();
+    event.preventDefault();
 
     // Checking for null values
     if (addedFats.value.trim() == '') {
@@ -248,6 +248,8 @@ document.getElementById("macros").addEventListener("submit", function (event) {
     inputs.forEach(function (input) {
         input.value = '';
     });
+
+    location.reload();
 });
 
 // When the new day button is pressed, call the newDay helper function after localStorage is updated
