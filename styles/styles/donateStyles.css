@@ -1,0 +1,20 @@
+#venmoImage {
+    width: 40vw;
+    border: 2px solid rgb(87, 100, 196);
+    border-radius: 12px;
+    grid-column: span 1;
+    margin-left: 5vw;
+    margin-left: 0;
+}
+
+.container {
+    margin-top: 9.4vh;
+    display: flex;
+    justify-content: center;
+}
+
+.mainDiv {
+    margin: 9vw;
+    margin-top: 3vh;
+    text-align: center;
+}

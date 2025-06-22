@@ -1,0 +1,90 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    height: 97vh;
+}
+
+.mainDiv {
+    margin-top: 9.4vh;
+}
+
+.logMain {
+    overflow: auto;
+}
+
+.centered {
+    text-align: center;
+}
+
+.macroCalDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.circle {
+    margin-right: 8vw;
+}
+
+@media (max-width: 1750px) {
+    .circle {
+        font-size: 12px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 1520px) {
+    .circle {
+        display: none;
+    }
+}
+
+.remove {
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+
+.smaller {
+    font-size: 20px;
+}
+
+.logDivMain {
+    margin-top: 3vh;
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.macro {
+    margin-top: 1vh;
+}
+
+.topCals {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logInfoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-height: 100vh;
+}
+
+@media (max-width: 1000px) {
+    .circle {
+        display: flex;
+        font-size: 6px !important;
+        height: 30px !important;
+        width: 30px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .circle {
+        display: flex;
+        font-size: 6px !important;
+        height: 30px !important;
+        width: 40px !important;
+    }
+}

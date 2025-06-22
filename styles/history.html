@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/historyStyles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io//favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_io//site.webmanifest">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="health.html">HEALTH</a></li>
+            <li><a class="selectedNav" href="#">HISTORY</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="donate.html">DONATE</a></li>
+        </ul>
+    </nav> /
+    <div class="container">
+        <div class="mainDiv logMain">
+            <p class="bolded centered">Your Chart</p>
+            <canvas class="info" id="caloriesChart"></canvas>
+        </div>
+        <div class="mainDiv noTopMargin">
+            <p class="bolded centered">Calorie Calculator</p>
+            <div class="info">
+                <form id="calculator">
+                    <div class="calcInput">
+                        <label>Sex</label>
+                        <select id="sex">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="calcInput">
+                        <label>Weight (lb.)</label>
+                        <input value="130" type="number" id="weight"><br>
+                    </div>
+                    <div class="calcInput">
+                        <label>Height (in.)</label>
+                        <input value="60" type="number" id="height"><br>
+                    </div>
+                    <div class="calcInput">
+                        <label>Age</label>
+                        <input value="18" type="number" id="age"><br>
+                    </div>
+                    <div class="calcInput">
+                        <label>Activity Level</label>
+                        <select id="activity">
+                            <option value="1">Little or No Exercise</option>
+                            <option value="2">Light Exercise 1-3 Days/Week</option>
+                            <option value="3">Moderate Exercise 3-5 Days/Week</option>
+                            <option value="4">Hard Exercise 6-7 Days/Week</option>
+                            <option value="5">Very Hard Exercise or Extremely Physical Occupation</option>
+                        </select>
+                    </div>
+                    <button type="submit">CALCULATE</button>
+                    <button id="goalUpdate" type="button">UPDATE GOAL</button>
+                </form>
+                <div class="info calcTotal">
+                    <span>Calories/Day:</span>
+                    <span id="caloriesFromCalc">...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/calorieCalculatorScript.js"></script>
+</body>
+
+</html>
