@@ -301,11 +301,14 @@ document.getElementById("newFood").addEventListener("click", function (event) {
     // Adding the custom food to the list
     foods.push({ name: addedName.value, fats: addedFats.value, carbs: addedCarbs.value, protein: addedProtein.value });
 
+    // Reloading the window, so that the user can search the list successfully
+    location.reload();
+
     // Set all of the values back to their placeholders once calculations are done
-    // var inputs = document.querySelectorAll("#macros input");
-    // inputs.forEach(function (input) {
-    //     input.value = '';
-    // });
+    var inputs = document.querySelectorAll("#macros input");
+    inputs.forEach(function (input) {
+        input.value = '';
+    });
 
     // Refreshing the list
     LoadFoods();
