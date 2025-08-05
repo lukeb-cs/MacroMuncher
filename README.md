@@ -7,7 +7,7 @@
 
 Below is a screenshot of the homepage:
 
-![Protein Pantry Screenshot](website.png)
+![Macro Muncher Screenshot](website.png)
 
 > You can clone the repo and open `index.html` in your browser to try it locally.
 
